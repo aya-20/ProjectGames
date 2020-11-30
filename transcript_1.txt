@@ -1,0 +1,225 @@
+# C:/Users/anzug/OneDrive/Desktop/ECE 571 SV/transcript.txt
+# Load canceled
+restart -f
+run -all
+# Test register file by walking a 1 through all of the locations
+# Writing 00000001 to regfile[ 0]
+# Writing 00000010 to regfile[ 1]
+# Writing 00000100 to regfile[ 2]
+# Writing 00001000 to regfile[ 3]
+# Writing 00010000 to regfile[ 4]
+# Writing 00100000 to regfile[ 5]
+# Writing 01000000 to regfile[ 6]
+# Writing 10000000 to regfile[ 7]
+# Writing 00000001 to regfile[ 8]
+# Writing 00000010 to regfile[ 9]
+# Writing 00000100 to regfile[10]
+# Writing 00001000 to regfile[11]
+# Writing 00010000 to regfile[12]
+# Writing 00100000 to regfile[13]
+# Writing 01000000 to regfile[14]
+# Writing 10000000 to regfile[15]
+# Writing 00000001 to regfile[16]
+# Writing 00000010 to regfile[17]
+# Writing 00000100 to regfile[18]
+# Writing 00001000 to regfile[19]
+# Writing 00010000 to regfile[20]
+# Writing 00100000 to regfile[21]
+# Writing 01000000 to regfile[22]
+# Writing 10000000 to regfile[23]
+# Writing 00000001 to regfile[24]
+# Writing 00000010 to regfile[25]
+# Writing 00000100 to regfile[26]
+# Writing 00001000 to regfile[27]
+# Writing 00010000 to regfile[28]
+# Writing 00100000 to regfile[29]
+# Writing 01000000 to regfile[30]
+# Writing 10000000 to regfile[31]
+# 
+# Check functionality by manually examining the register file contents
+# Contents of the Register file are:
+# regfile[ 0]: 00000001
+# regfile[ 1]: 00000010
+# regfile[ 2]: 00000100
+# regfile[ 3]: 00001000
+# regfile[ 4]: 00010000
+# regfile[ 5]: 00100000
+# regfile[ 6]: 01000000
+# regfile[ 7]: 10000000
+# regfile[ 8]: 00000001
+# regfile[ 9]: 00000010
+# regfile[10]: 00000100
+# regfile[11]: 00001000
+# regfile[12]: 00010000
+# regfile[13]: 00100000
+# regfile[14]: 01000000
+# regfile[15]: 10000000
+# regfile[16]: 00000001
+# regfile[17]: 00000010
+# regfile[18]: 00000100
+# regfile[19]: 00001000
+# regfile[20]: 00010000
+# regfile[21]: 00100000
+# regfile[22]: 01000000
+# regfile[23]: 10000000
+# regfile[24]: 00000001
+# regfile[25]: 00000010
+# regfile[26]: 00000100
+# regfile[27]: 00001000
+# regfile[28]: 00010000
+# regfile[29]: 00100000
+# regfile[30]: 01000000
+# regfile[31]: 10000000
+# -----------------------------------
+# 
+# Check functionality ALU arithmetic operations using random operands
+# 
+# Perform ALU Add operations
+# operation:       ADD_OP	 A_In: 10011100(156), B_In: 00011100( 28), ALU_Out: 10111000(184), Carry_Out: 0
+# operation:       ADD_OP	 A_In: 00011100( 28), B_In: 11101000(232), ALU_Out: 00000100(  4), Carry_Out: 1
+# operation:       ADD_OP	 A_In: 11101000(232), B_In: 10100111(167), ALU_Out: 10001111(143), Carry_Out: 1
+# operation:       ADD_OP	 A_In: 10100111(167), B_In: 00010110( 22), ALU_Out: 10111101(189), Carry_Out: 0
+# operation:       ADD_OP	 A_In: 00010110( 22), B_In: 11000100(196), ALU_Out: 11011010(218), Carry_Out: 0
+# operation:       ADD_OP	 A_In: 11000100(196), B_In: 00000000(  0), ALU_Out: 11000100(196), Carry_Out: 0
+# operation:       ADD_OP	 A_In: 00000000(  0), B_In: 01011001( 89), ALU_Out: 01011001( 89), Carry_Out: 0
+# operation:       ADD_OP	 A_In: 01011001( 89), B_In: 11111000(248), ALU_Out: 01010001( 81), Carry_Out: 1
+# 
+# Perform ALU Subtract operations
+# operation:       SUB_OP	 A_In: 10011100(156), B_In: 00011100( 28), ALU_Out: 10000000(128), Carry_Out: 0
+# operation:       SUB_OP	 A_In: 00011100( 28), B_In: 11101000(232), ALU_Out: 00110100( 52), Carry_Out: 1
+# operation:       SUB_OP	 A_In: 11101000(232), B_In: 10100111(167), ALU_Out: 01000001( 65), Carry_Out: 0
+# operation:       SUB_OP	 A_In: 10100111(167), B_In: 00010110( 22), ALU_Out: 10010001(145), Carry_Out: 0
+# operation:       SUB_OP	 A_In: 00010110( 22), B_In: 11000100(196), ALU_Out: 01010010( 82), Carry_Out: 1
+# operation:       SUB_OP	 A_In: 11000100(196), B_In: 00000000(  0), ALU_Out: 11000100(196), Carry_Out: 0
+# operation:       SUB_OP	 A_In: 00000000(  0), B_In: 01011001( 89), ALU_Out: 10100111(167), Carry_Out: 1
+# operation:       SUB_OP	 A_In: 01011001( 89), B_In: 11111000(248), ALU_Out: 01100001( 97), Carry_Out: 1
+# 
+# Perform ALU logical operations
+# operation:       ADD_OP	 A_In: 10101010(170), B_In: 01010101( 85), ALU_Out: 11111111(255), Carry_Out: 0
+# operation:       SUB_OP	 A_In: 10101010(170), B_In: 01010101( 85), ALU_Out: 01010100( 84), Carry_Out: 0
+# operation:      NOTA_OP	 A_In: 10101010(170), B_In: 01010101( 85), ALU_Out: 01010101( 85), Carry_Out: 0
+# operation:      ORAB_OP	 A_In: 10101010(170), B_In: 01010101( 85), ALU_Out: 11111111(255), Carry_Out: 0
+# operation:     ANDAB_OP	 A_In: 10101010(170), B_In: 01010101( 85), ALU_Out: 00000000(  0), Carry_Out: 0
+# operation:     NOTAB_OP	 A_In: 10101010(170), B_In: 01010101( 85), ALU_Out: 01010101( 85), Carry_Out: 0
+# operation:      EXOR_OP	 A_In: 10101010(170), B_In: 01010101( 85), ALU_Out: 11111111(255), Carry_Out: 0
+# operation:     EXNOR_OP	 A_In: 10101010(170), B_In: 01010101( 85), ALU_Out: 00000000(  0), Carry_Out: 0
+# 
+# ALU/REGFILE Test complete
+# 
+# ** Note: $stop    : C:/Users/anzug/OneDrive/Desktop/prob1/hdl/tb_alu_regflle.sv(191)
+#    Time: 1076 ns  Iteration: 0  Instance: /tb_alu_regfile
+# Break in NamedBeginStat apply_stimulus at C:/Users/anzug/OneDrive/Desktop/prob1/hdl/tb_alu_regflle.sv line 191
+restart -f
+run -f
+run -all
+# Simulation may not continue after final blocks are run.
+restart -f
+run -all
+# Test register file by walking a 1 through all of the locations
+# Writing 00000001 to regfile[ 0]
+# Writing 00000010 to regfile[ 1]
+# Writing 00000100 to regfile[ 2]
+# Writing 00001000 to regfile[ 3]
+# Writing 00010000 to regfile[ 4]
+# Writing 00100000 to regfile[ 5]
+# Writing 01000000 to regfile[ 6]
+# Writing 10000000 to regfile[ 7]
+# Writing 00000001 to regfile[ 8]
+# Writing 00000010 to regfile[ 9]
+# Writing 00000100 to regfile[10]
+# Writing 00001000 to regfile[11]
+# Writing 00010000 to regfile[12]
+# Writing 00100000 to regfile[13]
+# Writing 01000000 to regfile[14]
+# Writing 10000000 to regfile[15]
+# Writing 00000001 to regfile[16]
+# Writing 00000010 to regfile[17]
+# Writing 00000100 to regfile[18]
+# Writing 00001000 to regfile[19]
+# Writing 00010000 to regfile[20]
+# Writing 00100000 to regfile[21]
+# Writing 01000000 to regfile[22]
+# Writing 10000000 to regfile[23]
+# Writing 00000001 to regfile[24]
+# Writing 00000010 to regfile[25]
+# Writing 00000100 to regfile[26]
+# Writing 00001000 to regfile[27]
+# Writing 00010000 to regfile[28]
+# Writing 00100000 to regfile[29]
+# Writing 01000000 to regfile[30]
+# Writing 10000000 to regfile[31]
+# 
+# Check functionality by manually examining the register file contents
+# Contents of the Register file are:
+# regfile[ 0]: 00000001
+# regfile[ 1]: 00000010
+# regfile[ 2]: 00000100
+# regfile[ 3]: 00001000
+# regfile[ 4]: 00010000
+# regfile[ 5]: 00100000
+# regfile[ 6]: 01000000
+# regfile[ 7]: 10000000
+# regfile[ 8]: 00000001
+# regfile[ 9]: 00000010
+# regfile[10]: 00000100
+# regfile[11]: 00001000
+# regfile[12]: 00010000
+# regfile[13]: 00100000
+# regfile[14]: 01000000
+# regfile[15]: 10000000
+# regfile[16]: 00000001
+# regfile[17]: 00000010
+# regfile[18]: 00000100
+# regfile[19]: 00001000
+# regfile[20]: 00010000
+# regfile[21]: 00100000
+# regfile[22]: 01000000
+# regfile[23]: 10000000
+# regfile[24]: 00000001
+# regfile[25]: 00000010
+# regfile[26]: 00000100
+# regfile[27]: 00001000
+# regfile[28]: 00010000
+# regfile[29]: 00100000
+# regfile[30]: 01000000
+# regfile[31]: 10000000
+# -----------------------------------
+# 
+# Check functionality ALU arithmetic operations using random operands
+# 
+# Perform ALU Add operations
+# operation:       ADD_OP	 A_In: 10011100(156), B_In: 00011100( 28), ALU_Out: 10111000(184), Carry_Out: 0
+# operation:       ADD_OP	 A_In: 00011100( 28), B_In: 11101000(232), ALU_Out: 00000100(  4), Carry_Out: 1
+# operation:       ADD_OP	 A_In: 11101000(232), B_In: 10100111(167), ALU_Out: 10001111(143), Carry_Out: 1
+# operation:       ADD_OP	 A_In: 10100111(167), B_In: 00010110( 22), ALU_Out: 10111101(189), Carry_Out: 0
+# operation:       ADD_OP	 A_In: 00010110( 22), B_In: 11000100(196), ALU_Out: 11011010(218), Carry_Out: 0
+# operation:       ADD_OP	 A_In: 11000100(196), B_In: 00000000(  0), ALU_Out: 11000100(196), Carry_Out: 0
+# operation:       ADD_OP	 A_In: 00000000(  0), B_In: 01011001( 89), ALU_Out: 01011001( 89), Carry_Out: 0
+# operation:       ADD_OP	 A_In: 01011001( 89), B_In: 11111000(248), ALU_Out: 01010001( 81), Carry_Out: 1
+# 
+# Perform ALU Subtract operations
+# operation:       SUB_OP	 A_In: 10011100(156), B_In: 00011100( 28), ALU_Out: 10000000(128), Carry_Out: 0
+# operation:       SUB_OP	 A_In: 00011100( 28), B_In: 11101000(232), ALU_Out: 00110100( 52), Carry_Out: 1
+# operation:       SUB_OP	 A_In: 11101000(232), B_In: 10100111(167), ALU_Out: 01000001( 65), Carry_Out: 0
+# operation:       SUB_OP	 A_In: 10100111(167), B_In: 00010110( 22), ALU_Out: 10010001(145), Carry_Out: 0
+# operation:       SUB_OP	 A_In: 00010110( 22), B_In: 11000100(196), ALU_Out: 01010010( 82), Carry_Out: 1
+# operation:       SUB_OP	 A_In: 11000100(196), B_In: 00000000(  0), ALU_Out: 11000100(196), Carry_Out: 0
+# operation:       SUB_OP	 A_In: 00000000(  0), B_In: 01011001( 89), ALU_Out: 10100111(167), Carry_Out: 1
+# operation:       SUB_OP	 A_In: 01011001( 89), B_In: 11111000(248), ALU_Out: 01100001( 97), Carry_Out: 1
+# 
+# Perform ALU logical operations
+# operation:       ADD_OP	 A_In: 10101010(170), B_In: 01010101( 85), ALU_Out: 11111111(255), Carry_Out: 0
+# operation:       SUB_OP	 A_In: 10101010(170), B_In: 01010101( 85), ALU_Out: 01010100( 84), Carry_Out: 0
+# operation:      NOTA_OP	 A_In: 10101010(170), B_In: 01010101( 85), ALU_Out: 01010101( 85), Carry_Out: 0
+# operation:      ORAB_OP	 A_In: 10101010(170), B_In: 01010101( 85), ALU_Out: 11111111(255), Carry_Out: 0
+# operation:     ANDAB_OP	 A_In: 10101010(170), B_In: 01010101( 85), ALU_Out: 00000000(  0), Carry_Out: 0
+# operation:     NOTAB_OP	 A_In: 10101010(170), B_In: 01010101( 85), ALU_Out: 01010101( 85), Carry_Out: 0
+# operation:      EXOR_OP	 A_In: 10101010(170), B_In: 01010101( 85), ALU_Out: 11111111(255), Carry_Out: 0
+# operation:     EXNOR_OP	 A_In: 10101010(170), B_In: 01010101( 85), ALU_Out: 00000000(  0), Carry_Out: 0
+# 
+# ALU/REGFILE Test complete
+# 
+# ** Note: $stop    : C:/Users/anzug/OneDrive/Desktop/prob1/hdl/tb_alu_regflle.sv(191)
+#    Time: 1076 ns  Iteration: 0  Instance: /tb_alu_regfile
+# Break in NamedBeginStat apply_stimulus at C:/Users/anzug/OneDrive/Desktop/prob1/hdl/tb_alu_regflle.sv line 191
+set PrefMain(file) {C:/Users/anzug/OneDrive/Desktop/ECE 571 SV/transcript1.txt}
